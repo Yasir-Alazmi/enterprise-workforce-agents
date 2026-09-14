@@ -1,0 +1,37 @@
+{
+  "policy_id": "POL-PROC-001",
+  "title": "Corporate Procurement and Financial Delegation of Authority",
+  "version": "2.4",
+  "effective_date": "2026-01-01",
+  "rules": [
+    {
+      "rule_id": "RULE-001",
+      "condition": "amount <= 1000",
+      "max_amount": 1000.0,
+      "approval_required": "EMPLOYEE_EXPENSE",
+      "description": "Standard operational expenses under $1,000 can be expensed directly."
+    },
+    {
+      "rule_id": "RULE-002",
+      "condition": "1000 < amount <= 5000",
+      "max_amount": 5000.0,
+      "approval_required": "DEPARTMENT_MANAGER",
+      "description": "Purchases between $1,000 and $5,000 require Department Manager sign-off."
+    },
+    {
+      "rule_id": "RULE-003",
+      "condition": "amount > 5000",
+      "max_amount": 50000.0,
+      "approval_required": "CFO_EXECUTIVE_APPROVAL",
+      "requires_hitl": true,
+      "description": "Any purchase order exceeding $5,000 strictly requires Executive CFO approval via Human-in-the-Loop gateway."
+    },
+    {
+      "rule_id": "RULE-004",
+      "condition": "budget_spent + amount > budget_annual",
+      "approval_required": "BUDGET_OVERRUN_EXCEPTION",
+      "requires_hitl": true,
+      "description": "Any purchase exceeding annual allocated department budget is blocked unless exception granted."
+    }
+  ]
+}

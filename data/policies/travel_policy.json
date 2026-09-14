@@ -1,0 +1,16 @@
+{
+  "policy_id": "POL-TRV-002",
+  "title": "Corporate Travel & Expense Reimbursement Policy",
+  "version": "1.8",
+  "effective_date": "2026-01-01",
+  "rules": [
+    {
+      "rule_id": "TRV-001",
+      "max_daily_lodging": 350.0,
+      "max_daily_meals": 120.0,
+      "flight_class": "ECONOMY",
+      "requires_preapproval": true,
+      "description": "International travel requires minimum 14 days advance departmental approval."
+    }
+  ]
+}
