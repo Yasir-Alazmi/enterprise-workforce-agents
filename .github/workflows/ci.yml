@@ -30,6 +30,10 @@ jobs:
       run: |
         ruff check .
 
+    - name: Seed enterprise database
+      run: |
+        python scripts/seed_enterprise_db.py
+
     - name: Run Test Suite
       run: |
         pytest tests/ -v

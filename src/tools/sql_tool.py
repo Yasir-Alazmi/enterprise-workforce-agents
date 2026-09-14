@@ -36,6 +36,15 @@ class SafeSQLTool(BaseTool):
             self._db_path = project_root / self._db_path
         self._forbidden_regex = re.compile("|".join(FORBIDDEN_SQL_PATTERNS), re.IGNORECASE)
 
+        # Auto-seed database if file does not exist
+        if not self._db_path.exists():
+            try:
+                from scripts.seed_enterprise_db import seed_db, seed_policies
+                seed_db()
+                seed_policies()
+            except Exception as e:
+                logger.warning("Could not auto-seed database: %s", e)
+
     @property
     def name(self) -> str:
         return "safe_sql_query"
