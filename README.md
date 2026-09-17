@@ -1,5 +1,6 @@
 # Enterprise Workforce Multi-Agent Orchestrator
 
+[![CI](https://github.com/Yasir-Alazmi/enterprise-workforce-agents/actions/workflows/ci.yml/badge.svg)](https://github.com/Yasir-Alazmi/enterprise-workforce-agents/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
