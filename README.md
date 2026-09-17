@@ -81,7 +81,7 @@ An enterprise reference architecture and production platform for autonomous mult
 ## Empirical Benchmark & Evaluation Results
 
 ### Performance Benchmark (`scripts/benchmark_workflow.py`)
-Measured across 100 consecutive requests on Windows (AMD64, Python 3.13):
+Measured across 100 consecutive requests on local test harness (in-memory `Starlette` TestClient + local SQLite, measuring internal orchestration overhead without external LLM network round-trip delays):
 
 | Workflow Type | p50 Latency (Median) | p95 Latency | Automated Test Suite |
 | :--- | :--- | :--- | :--- |
@@ -89,7 +89,7 @@ Measured across 100 consecutive requests on Windows (AMD64, Python 3.13):
 | **Full HITL Multi-Agent Requisition Workflow** | **2.85 ms** | **3.42 ms** | 12 Test Suites |
 
 ### Automated System Evaluation Report (`scripts/evaluate_agents.py`)
-Evaluated across diverse enterprise scenarios:
+Evaluated across golden deterministic integration scenarios (department budget inquiry, low-value direct expense, high-value HITL procurement gating, and adversarial prompt-injection defense):
 
 | Evaluation Metric | Aggregate Score | Target SLA |
 | :--- | :--- | :--- |
